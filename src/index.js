@@ -1,9 +1,10 @@
 import * as express from 'express'
 
 const app = express()
+app.use(express.json())
 
-import userController from './Controller/userController'
-import postController from './Controller/postController'
+import userController from './Modules/user/userController'
+import postController from './Modules/post/postController'
 
 app.use('/user', userController)
 app.use('/post', postController)
